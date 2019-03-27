@@ -1,0 +1,19 @@
+<hello name="{{ name }}"></hello>
+<hr>
+<!-- <div *ngFor="let group of groupList">
+	<input type="text" [(ngModel)]="group.name" >
+</div> -->
+
+<div *ngFor="let group of groupList">
+	<!-- <input type="text" [ngModel]="group.name" #groupRef > -->
+  	<!-- <input type="text" (keypress)="true" #groupRef > -->
+    	<input type="text"  #groupRef >
+{{groupRef.value}}
+</div>
+<hr>
+<pre>
+{{groupList | json}}
+</pre>
+<a href="#" (click)="true">Click me</a>
+<div #he>Hello Bro</div>
+{{he.innerText}}
